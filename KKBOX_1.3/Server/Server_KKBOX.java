@@ -23,7 +23,7 @@ public Server_KKBOX() throws IOException
 				S1.send("1["+i+"]"+musicName[i].getName());
 			}
 			S1.send("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			S1.send("2/over(²×¤îµ{§Ç)¡A/pause(¼È°±)¡A/resume(Ä~Äò©Î­«ÀY¼½©ñ)¡A/next(¤U¤@­º)¡A/back(¤W¤@­º)¡A/rand(ÀH¾÷¼½©ñ)\n½Ğ¿ï¾Ü°Ê§@©Î¿é¤J­µ¼Ö½s¸¹:");
+			S1.send("2/over(çµ‚æ­¢ç¨‹åº)ï¼Œ/pause(æš«åœ)ï¼Œ/resume(ç¹¼çºŒæˆ–é‡é ­æ’­æ”¾)ï¼Œ/next(ä¸‹ä¸€é¦–)ï¼Œ/back(ä¸Šä¸€é¦–)ï¼Œ/rand(éš¨æ©Ÿæ’­æ”¾)\nè«‹é¸æ“‡å‹•ä½œæˆ–è¼¸å…¥éŸ³æ¨‚ç·¨è™Ÿ:");
 			str = S1.receive();
 			System.out.println(str);
 			Pattern pattern = Pattern.compile("[0-9]*");
@@ -31,7 +31,7 @@ public Server_KKBOX() throws IOException
             {    
 				if(Integer.parseInt(str) > f.listFiles().length)
 				{
-					S1.send("1½Ğ¿é¤J¦s¦bªº­µ¼Ö½s¸¹");
+					S1.send("1è«‹è¼¸å…¥å­˜åœ¨çš„éŸ³æ¨‚ç·¨è™Ÿ");
 					continue;
 				}
 				point = Integer.parseInt(str);
@@ -82,7 +82,7 @@ public Server_KKBOX() throws IOException
 			else if(str.equals("/pause") || str.equals("/resume"))
             {   
 				if(!isPlaying){
-					S1.send("1½Ğ¥ı¿ï¾Ü­µ¼Ö");
+					S1.send("1è«‹å…ˆé¸æ“‡éŸ³æ¨‚");
 					continue;
 				}
 				S1.send("5"+str);
@@ -94,7 +94,7 @@ public Server_KKBOX() throws IOException
                 break;
             }
 			else {
-				S1.send("1½Ğ¿é¤J¥¿½Tªº­µ¼Ö½s¸¹¡A©Î¬O­µ¼Ö«ü¥O");
+				S1.send("1è«‹è¼¸å…¥æ­£ç¢ºçš„éŸ³æ¨‚ç·¨è™Ÿï¼Œæˆ–æ˜¯éŸ³æ¨‚æŒ‡ä»¤");
 			}
 		}
 	}
