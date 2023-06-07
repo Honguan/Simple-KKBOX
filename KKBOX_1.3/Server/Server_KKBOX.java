@@ -10,7 +10,7 @@ public class Server_KKBOX {
 	boolean isPlaying = false;
 
 	public Server_KKBOX() throws IOException {
-		Server S1 = new Server(3200);
+		Server S1 = new Server(port);
 		S1.accept();
 		File f = new File("music");
 		File[] musicName = f.listFiles();
@@ -21,13 +21,13 @@ public class Server_KKBOX {
 				S1.send("1[" + i + "]" + musicName[i].getName());
 			}
 			S1.send("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			S1.send("2/over(Terminate program)，/pause(pause)，/resume(resume or restart)，/next(next song)，/back(previous song)，/rand(Shuffle Playback)\nPlease select an action or enter a music number:");
+			S1.send("2/over\t(Terminate program)\n/pause\t(pause)\n/resume\t(resume or restart)\n/next\t(next song)\n/back\t(previous song)\n/rand\t(Shuffle Playback)\nPlease select an action or enter a music number:");
 			str = S1.receive();
 			System.out.println(str);
 			Pattern pattern = Pattern.compile("[0-9]*");
 			if (pattern.matcher(str).matches()) {
 				if (Integer.parseInt(str) > f.listFiles().length) {
-					S1.send("1Please enter an existing music number");
+					S1.send("1Please enter an existing music number(only number) or command(ex:/over)");
 					continue;
 				}
 				point = Integer.parseInt(str);
@@ -92,7 +92,7 @@ public class Server_KKBOX {
 			System.exit(1);
 		}
 
-		port = Integer.parseInt(args[1]);
+		port = Integer.parseInt(args[0]);
 		Server_KKBOX ServerStart = new Server_KKBOX();
 	}
 }
