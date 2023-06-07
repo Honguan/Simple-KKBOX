@@ -8,7 +8,7 @@ note:
 
 ## Server use method
 
-使用bat啟動:雙擊`start_server.bat`
+Start using bat: double click`start_server.bat`
 
 ```bat
 
@@ -21,7 +21,7 @@ pause
 
 ## Client use method
 
-使用bat啟動:雙擊`start_client.bat`
+Start using bat: double click`start_client.bat`
 
 ```bat
 javac -classpath .;jaco-mp3-player-0.9.4.jar Client_KKBOX.java
@@ -29,3 +29,21 @@ pause
 java -classpath .;jaco-mp3-player-0.9.4.jar Client_KKBOX 127.0.0.1 9756 #127.0.0.1為server ip(使用不同電腦連線時，可用ipconfig查詢並修改)，9756為port number(可自行更改)
 pause
 ```
+
+## Use method (connection screen)
+
+**connection screen** (server screen)
+
+![image](KKBOX\image\Server_Waiting_for_connection_screen.png)
+
+**connection screen** (client screen)
+
+![image](KKBOX\image\Client_Waiting_for_connection_screen.png)
+
+## Use method (use command)
+
+**command** (server screen)
+![image](KKBOX\image\Server_command.png)
+
+**command** (client screen)
+![image](KKBOX\image\Client_command.png)
