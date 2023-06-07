@@ -34,16 +34,16 @@ pause
 
 **connection screen** (server screen)
 
-![image](KKBOX\image\Server_Waiting_for_connection_screen.png)
+![image](image\Server_Waiting_for_connection_screen.png)
 
 **connection screen** (client screen)
 
-![image](KKBOX\image\Client_Waiting_for_connection_screen.png)
+![image](image\Client_Waiting_for_connection_screen.png)
 
 ## Use method (use command)
 
 **command** (server screen)
-![image](KKBOX\image\Server_command.png)
+![image](image\Server_command.png)
 
 **command** (client screen)
-![image](KKBOX\image\Client_command.png)
+![image](image\Client_command.png)
