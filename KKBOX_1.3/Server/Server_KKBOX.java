@@ -21,13 +21,13 @@ public class Server_KKBOX {
 				S1.send("1[" + i + "]" + musicName[i].getName());
 			}
 			S1.send("1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			S1.send("2/over(終止程序)，/pause(暫停)，/resume(繼續或重頭播放)，/next(下一首)，/back(上一首)，/rand(隨機播放)\n請選擇動作或輸入音樂編號:");
+			S1.send("2/over(Terminate program)，/pause(pause)，/resume(resume or restart)，/next(next song)，/back(previous song)，/rand(Shuffle Playback)\nPlease select an action or enter a music number:");
 			str = S1.receive();
 			System.out.println(str);
 			Pattern pattern = Pattern.compile("[0-9]*");
 			if (pattern.matcher(str).matches()) {
 				if (Integer.parseInt(str) > f.listFiles().length) {
-					S1.send("1請輸入存在的音樂編號");
+					S1.send("1Please enter an existing music number");
 					continue;
 				}
 				point = Integer.parseInt(str);
@@ -72,7 +72,7 @@ public class Server_KKBOX {
 				isPlaying = true;
 			} else if (str.equals("/pause") || str.equals("/resume")) {
 				if (!isPlaying) {
-					S1.send("1請先選擇音樂");
+					S1.send("1Please select music first");
 					continue;
 				}
 				S1.send("5" + str);
@@ -81,7 +81,7 @@ public class Server_KKBOX {
 				S1.close();
 				break;
 			} else {
-				S1.send("1請輸入正確的音樂編號，或是音樂指令");
+				S1.send("1Please enter the correct music number, or music command");
 			}
 		}
 	}
