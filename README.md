@@ -1,6 +1,6 @@
 # Simple-KKBOX
 
-note: 
+note:
 
 * **必須先啟動server，再啟動client，否則會無法連線。**
 * **server與client必須在同一個網域和端口下，才能連線。**
@@ -34,16 +34,16 @@ pause
 
 **connection screen** (server screen)
 
-![image](image\Server_Waiting_for_connection_screen.png)
+<img alt="Server_Waiting_for_connection_screen" src="image\Server_Waiting_for_connection_screen.png">
 
 **connection screen** (client screen)
 
-![image](image\Client_Waiting_for_connection_screen.png)
+<img alt="Client_Waiting_for_connection_screen" src="image\Client_Waiting_for_connection_screen.png">
 
 ## Use method (use command)
 
 **command** (server screen)
-![image](image\Server_command.png)
+<img alt="Server_command" src="image\Server_command.png">
 
 **command** (client screen)
-![image](image\Client_command.png)
+<img alt="Client_command" src="image\Client_command.png">
