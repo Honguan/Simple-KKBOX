@@ -1,4 +1,4 @@
 javac Server_KKBOX.java
 pause
-java Server_KKBOX 978883
+java Server_KKBOX 9756
 pause
