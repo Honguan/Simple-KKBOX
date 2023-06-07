@@ -103,13 +103,3 @@ public static void main(String args[]) throws IOException
     Server_KKBOX ServerStart=new Server_KKBOX();
 }
 }
-//FileOutputStream fos = new FileOutputStream("b.mp3");
-//
-//while(messagein != -1){ 
-//	messagein = instream.readInt();	
-//	if(messagein != -1)
-//		fos.write(messagein);
-//} 
-//fos.close();
-//	MP3 a = new MP3("b.mp3");
-//	a.playsong();
