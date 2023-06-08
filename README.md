@@ -3,7 +3,7 @@
 note:
 
 * **必須先啟動server，再啟動client，否則會無法連線。**
-* **server與client必須在同一個網域和端口下，才能連線。**
+* **server與client必須在同一個端口下，才能連線。**
 * **斷開連線後，必須重新啟動server，才能再次連線。**
 
 ## Server use method
